@@ -1,0 +1,17 @@
+{
+  "name": "http-trailer-field",
+  "version": "0.1.0",
+  "description": "Splits a chunked transfer response body from its trailing headers when using fetch streams.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {}
+}
