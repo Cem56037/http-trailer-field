@@ -27,3 +27,10 @@ A response body that genuinely ends with two blank lines (`CRLF CRLF`) is indist
 - `stripTrailers(input)` — returns the body string only.
 
 `input` is a `string` or `Uint8Array`. Trailer names are returned with original casing. Duplicate names are joined with `", "`.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
